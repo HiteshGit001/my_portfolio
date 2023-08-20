@@ -1,0 +1,24 @@
+@import '../../scss/imports';
+
+.nav_container {
+  background: $navGradient;
+  box-shadow: $navBoxShadow;
+  backdrop-filter: blur(20px);
+  padding: 0.25rem;
+  border-radius: 5rem;
+}
+
+.nav_selected {
+  background-color: $gray;
+  padding: 0.75rem 1rem;
+  border-radius: 50%;
+}
+
+.nav_not_selected:hover {
+  border: 2px solid $primary;
+  border-radius: 50%;
+}
+
+.nav_not_selected {
+  padding: 1rem 0;
+}

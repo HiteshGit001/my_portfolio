@@ -1,0 +1,83 @@
+@import './imports';
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.gap_0 {
+  gap: 0;
+}
+
+.gap_16 {
+  gap: 1rem;
+}
+
+.gap_8 {
+  gap: 0.5rem;
+}
+
+.gap_32 {
+  gap: 2rem !important;
+}
+
+.rgap_8 {
+  row-gap: 0.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row_start {
+  justify-content: flex-start !important;
+}
+
+.row_end {
+  justify-content: flex-end;
+}
+
+.col_start {
+  align-items: flex-start !important;
+}
+
+.col_baseline {
+  align-items: baseline !important;
+}
+
+.space_between {
+  justify-content: space-between;
+}
+
+.row_center {
+  justify-content: center;
+}
+
+.col_center {
+  align-items: center;
+}
+
+.col_flex_end {
+  align-items: flex-end;
+}
+
+.row_flex_end {
+  justify-content: flex-end;
+}
+
+.row_reverse {
+  flex-direction: row-reverse;
+}
+
+// grid
+
+.grid {
+  display: grid;
+}
+
+.grid_1_1 {
+  grid-template-columns: 1fr 1fr;
+}

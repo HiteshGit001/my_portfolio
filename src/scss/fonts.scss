@@ -1,0 +1,74 @@
+@import './imports';
+
+// fonst
+.f_inter {
+  font-family: $inter, sans-serif;
+}
+
+.f_league {
+  font-family: $league, sans-serif;
+}
+
+.fs_16 {
+  font-size: 1rem;
+}
+
+.fs_20 {
+  font-size: 1.25rem;
+}
+
+.fs_24 {
+  font-size: 1.5rem;
+}
+
+.fs_32 {
+  font-size: 2rem;
+}
+
+.fs_70 {
+  font-size: 4.75rem;
+}
+
+.fs_48 {
+  font-size: 3rem;
+}
+
+.fs_24 {
+  font-size: 1.5rem;
+}
+
+// line height
+.lh_56 {
+  line-height: 3.5rem;
+}
+
+// weight
+.w_300 {
+  font-weight: 300;
+}
+
+.w_400 {
+  font-weight: 400;
+}
+
+.w_500 {
+  font-weight: 500;
+}
+
+.w_600 {
+  font-weight: 600;
+}
+
+.w_800 {
+  font-weight: 800;
+}
+
+// cursor
+.pointer {
+  cursor: pointer;
+}
+
+// text align
+.text_center {
+  text-align: center;
+}

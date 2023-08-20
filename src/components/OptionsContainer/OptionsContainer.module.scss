@@ -1,0 +1,74 @@
+@import '../../scss/imports';
+
+.hero_img {
+  width: 19rem;
+  // height: 10%;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+  border-radius: 2.5rem 2.5rem 0 0;
+}
+
+.scroll {
+  overflow: scroll;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll_items {
+  animation-name: infinite_text;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.scroll_items h4 {
+  margin-right: 15px;
+  font-size: 4rem;
+  -webkit-text-stroke: 2px $primary;
+  color: transparent;
+  transition: all 0.5s;
+  font-family: sans-serif;
+}
+
+.scroll_items h4:hover {
+  color: $primary !important;
+}
+
+.card_item_hover {
+  display: none;
+  padding: 1rem;
+}
+
+.card_items:hover {
+  transition: all 0.5s;
+  background-color: $primary;
+  color: $white;
+  transform: rotate3d(-1, 1, 0, 20deg);
+}
+
+.card_items:hover .card_item_not_hover {
+  display: none;
+}
+
+.card_items:hover .card_item_hover {
+  display: block;
+}
+
+.more_icon {
+  padding: 1rem;
+  float: right;
+  border: 2px solid $white;
+  border-radius: 50%;
+}
+
+@keyframes infinite_text {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}

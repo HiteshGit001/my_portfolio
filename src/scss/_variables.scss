@@ -1,0 +1,24 @@
+// Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// LEAGUE SPARTAN
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+$inter: 'Inter';
+$league: 'League Spartan';
+// color
+$bg: rgba(21, 22, 26, 1);
+$adaptiveStrong: rgba(255, 255, 255, 1);
+$adaptiveWeak: rgba(255, 255, 255, 0.6);
+$white: #FFFFFF;
+
+$cardBgColor: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.02) 100%);
+$cardBoxShadow: 0px 1px 2px rgba(0, 0, 0, 0.04), 0px 3px 8px rgba(0, 0, 0, 0.12), 0px 8px 16px rgba(0, 0, 0, 0.6);
+
+$navGradient: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%), rgba(0, 0, 0, 0.1);
+$navBoxShadow: 0px 1px 1px rgba(0, 0, 0, 0.04), 0px 2px 3px rgba(0, 0, 0, 0.12), 0px 6px 9px rgba(0, 0, 0, 0.6);
+$gray: rgba(255, 255, 255, 0.1);
+
+$primary: rgb(0, 21, 255);
+$primary_blur: rgba(0, 21, 255, 0.215);
+$error: rgb(246, 67, 67);

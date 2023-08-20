@@ -1,0 +1,30 @@
+@import './imports';
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.stickey {
+  position: sticky;
+}
+
+// top
+.top_0 {
+  top: 0;
+}
+
+.z_1 {
+  z-index: 1;
+}
+
+.z_2 {
+  z-index: 2;
+}

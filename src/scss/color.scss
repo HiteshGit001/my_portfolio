@@ -1,0 +1,38 @@
+@import './imports';
+
+.adaptiveStrong {
+  color: $adaptiveStrong;
+}
+
+.white {
+  color: $white;
+}
+
+.adaptiveWeak {
+  color: $adaptiveWeak;
+}
+
+.transprant {
+  color: transparent;
+}
+
+.primary {
+  color: $primary;
+}
+
+.error {
+  color: $error;
+}
+
+// background color
+.bg_primary {
+  background-color: $primary;
+}
+
+.bg_primary_shade {
+  background-color: $primary_blur;
+}
+
+.bg_white {
+  background-color: $white;
+}
