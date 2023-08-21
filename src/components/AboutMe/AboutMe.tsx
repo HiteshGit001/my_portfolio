@@ -7,15 +7,16 @@ import MechanicalJson from '../../assets/gif/mechJson.json';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from './AboutMe.module.scss';
 
-const Aboutme = ({ blok }) => {
+const Aboutme = ({ blok }: any) => {
   const card1 = useRef(null);
   const card2 = useRef(null);
 
+  const size = screen.availWidth;
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     gsap.fromTo('#ref_card1',
       {
-        x: 200,
+        x: size >= 500 ? 200 : 50,
         stagger: {
           each: 5,
           amount: blok?.aboutItems?.length,
@@ -45,7 +46,7 @@ const Aboutme = ({ blok }) => {
     )
     gsap.fromTo('#ref_card2',
       {
-        x: -256,
+        x: size >= 500 ? -256 : -50,
         stagger: {
           each: 5,
           amount: blok?.aboutItems?.length,
@@ -76,7 +77,7 @@ const Aboutme = ({ blok }) => {
   }, []);
   return (
     <div className='card container'>
-      <div id={blok?.clickId} className='flex space_between col_center wrap'>
+      <div id={blok?.clickId} className={cx('flex col_center wrap', size >= 500 ? 'space_between' : 'row_center')}>
         <Loader jsonFile={MechanicalJson} />
         <div className='text_center'>
           <p className='fs_48 white w_500'>{blok?.Name}</p>
@@ -94,17 +95,17 @@ const Aboutme = ({ blok }) => {
                 <div className={cx('absolute', styles.extension_card)} />
                 <div className='flex gap_16'>
                   <span className='bg_primary h_max_content fs_16 w_800 p_8 br_8 mb_8'>{ele?.iconText}</span>
-                  <p className={cx(styles.about_dis, 'max_w_90 f_league fs_16 white')}>{ele?.description}</p>
+                  <p className={cx(styles.about_dis, 'max_w_90 f_league fs_16 white', size >= 500 ? '' : '')}>{size >= 500 ? ele?.description : ele?.mobileDesc}</p>
                 </div>
               </div>
-              <div ref={card2} id='ref_card2' className={cx(styles.card2,'flex col_center')}>
-                <p className='fs_48 f_league black w_800'>{ele?.title}</p>
+              <div ref={card2} id='ref_card2' className={cx(styles.card2, 'flex col_center')}>
+                <p className={cx(size >= 500 ? 'fs_48 f_league black w_800' : 'f_league black')}>{ele?.title}</p>
               </div>
             </div>
           )
         })
       }
-    </div>
+    </div >
   )
 }
 

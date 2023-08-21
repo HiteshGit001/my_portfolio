@@ -3,8 +3,11 @@ import style from './ContactMe.module.scss';
 import { ALPHA_REGEX, EMAIL_REGEX, NUMBER_REGEX } from '../../helper/regex';
 import { axiosPost } from '../../server/https.server';
 import { SUBMIT_FORM } from '../../api/api';
+import cx from 'classnames';
 
 const ContactMe = ({ blok }) => {
+  const size = screen.availWidth;
+
   const initialState = {
     firstName: '',
     lastName: '',
@@ -135,7 +138,7 @@ const ContactMe = ({ blok }) => {
         }
       </div>
       <form onSubmit={onSubmit}>
-        <div className='flex gap_8 mt_16'>
+        <div className={cx(size >= 500 ? 'flex gap_8 mt_16' : 'flex column gap_16 mt_16')}>
           <div className='w_100'>
             <div className='flex gap_8 mb_8'>
               <div className='w_100'>

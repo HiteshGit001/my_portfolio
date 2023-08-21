@@ -6,6 +6,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { openInNewTab } from '../../helper/functions';
 
 const Projects = ({ blok }) => {
+  const size = screen.availWidth;
+
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     gsap.to('#project_item1', {
@@ -65,8 +67,8 @@ const Projects = ({ blok }) => {
         <div className={cx(style.project_title, 'f_league fs_70 px_24 primary')}>
           {blok?.title}
         </div>
-        <p className={cx('fs_16 f_league px_16 white w_50', style.project_dis)}>{blok?.discription}</p>
-        <div id='project_item1' className={cx(style.project_container, 'flex gap_16 mb_16')}>
+        <p className={cx('fs_16 f_league px_16 white', size >= 500 ? 'w_50' : '', style.project_dis)}>{blok?.discription}</p>
+        <div id='project_item1' className={cx(style.project_container, size >= 500 ? 'flex gap_16 mb_16' : 'display_none')}>
           {
             blok?.projectItems?.map((ele: any) => {
               return (
@@ -81,7 +83,7 @@ const Projects = ({ blok }) => {
             })
           }
         </div>
-        <div id='project_item2' className={cx(style.project_container2, 'flex gap_16')}>
+        <div id='project_item2' className={cx(style.project_container2, size >= 500 ? 'flex gap_16' : 'display_none')}>
           {
             blok?.projectItems?.map((ele: any) => {
               return (
@@ -97,7 +99,7 @@ const Projects = ({ blok }) => {
           }
         </div>
       </div>
-      <div className='br_16 grid grid_1_1 gap_8 mt_8 relative'>
+      <div className={cx('br_16 grid gap_8 mt_8 relative', size >= 500 ? 'grid_1_1' : '')}>
         {
           blok?.projectTiles?.map((ele: any, index: number) => {
             return (

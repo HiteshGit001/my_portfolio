@@ -9,19 +9,20 @@ interface IExperience {
 }
 const Experience = ({ blok }) => {
   const { Name, backgroundImg, experiences } = blok;
+  const size = screen.availWidth;
 
   return (
     <div className={cx(style.exp_box, 'card container')}>
       <div id={blok?.clickId} style={{ backgroundImage: `url(${backgroundImg?.filename})` }} className={cx(style.exp_container, 'br_32')}>
       </div>
       <div className={cx(style.exp_slider_card, 'card br_8')}>
-        <p className='fs_48 w_500 mb_16'>{Name}</p>
+        <p className={cx(size >= 500 ? 'fs_48 w_500 mb_16' : 'w_500 mb_16')}>{Name}</p>
         <div>
           {
             experiences?.map((ele: IExperience) => {
               return (
                 <div>
-                  <p className='fs_32 w_800'>{ele?.companyName}</p>
+                  <p className={cx(size >= 500 ? 'fs_32 w_800' : '')}>{ele?.companyName}</p>
                   <p>{ele?.fromTo}</p>
                   {
                     ele?.designations?.map((item: any) => {

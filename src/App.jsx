@@ -15,7 +15,6 @@ function App() {
 
   const cursoor = useRef(null);
   const cursoor_blure = useRef(null);
-
   document.addEventListener('mousemove', function (dets) {
     cursoor.current.style.left = dets.x + 'px'
     cursoor.current.style.top = dets.y + 'px'

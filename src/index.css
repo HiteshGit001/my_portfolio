@@ -80,3 +80,19 @@ input {
 ::placeholder {
   color: white !important;
 }
+
+
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.display_none {
+  display: none;
+}
+
+.display_blok {
+  display: block;
+}
