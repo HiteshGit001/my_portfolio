@@ -20,11 +20,12 @@ const HeroProjectContainer = ({ blok }) => {
     <div className="cd">
       {item.map((ele, ind) => {
         return (
-          <div
+          <a
             key={ele?.title + ind}
             style={{ gap: "1rem", transform: `rotate(${ele?.angle}deg)`, width: "20rem" }}
-            className={`col_center white project_card ${ind === id ? "project_card_hover" : "project_card_1"
+            className={`pointer col_center white project_card ${ind === id ? "project_card_hover" : "project_card_1"
               }`}
+            href={ele?.link}
             onMouseOver={() => handleMouseEnter(ind)}
             onMouseOut={() => handleMouseOut()}
           >
@@ -34,7 +35,7 @@ const HeroProjectContainer = ({ blok }) => {
             <div>
               <p>{ele?.title}</p>
             </div>
-          </div>
+          </a>
         );
       })}
     </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import cx from 'classnames';
 import NavBar from '../NavBar/NavBar';
 import Intro from '../Intro/Intro';
@@ -18,7 +18,7 @@ const HeroBanner = ({ blok }: any) => {
 
   useEffect(() => {
     gsap.from(navitems.current, { borderRadius: 0, duration: 0.75, y: 100, opacity: 0 });
-    gsap.to(navitems.current, { y: 0, opacity: 1, duration: 0.75 });
+    gsap.to(navitems.current, { borderRadius: 3, y: 0, opacity: 1, duration: 0.75 });
     gsap.to(hero_banner.current, {
       backgroundColor: '#000',
       duration: 1,
@@ -42,14 +42,14 @@ const HeroBanner = ({ blok }: any) => {
 
 
   return (
-    <div className={cx('relative h_100vh')}>
+    <div className={cx('relative h_100vh', styles.hero_banner_container)}>
       <div>
         <div ref={hero_banner} className={cx(styles.bg_video, 'fixed top_0')} />
         {/* <video className={cx(styles.hero_video, 'fixed top_0')} autoPlay loop muted src={blok?.heroVideo?.filename} /> */}
       </div>
       <div className={cx('', styles.hero_content)}>
         {/* <div className={styles.hero_box}> */}
-        <div ref={navitems} className={cx('flex space_between mh_100 container', styles.hero_banner_container)}>
+        <div ref={navitems} style={{ padding: "1rem", borderRadius: "2rem" }} className={cx('flex space_between mh_100 container', styles.hero_banner_container)}>
           <div className={cx(styles.hero_nav)}>
             <NavBar blok={blok} />
           </div>
