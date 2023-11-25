@@ -6,6 +6,7 @@ import styles from './HeroBanner.module.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ScrollDownComponent from '../ScrollDownComponent/ScrollDownComponent';
+import HeroProjectContainer from '../HeroProjectContainer/HeroProjectContainer';
 
 const HeroBanner = ({ blok }: any) => {
 
@@ -44,22 +45,23 @@ const HeroBanner = ({ blok }: any) => {
     <div className={cx('relative h_100vh')}>
       <div>
         <div ref={hero_banner} className={cx(styles.bg_video, 'fixed top_0')} />
-        <video className={cx(styles.hero_video, 'fixed top_0')} autoPlay loop muted src={blok?.heroVideo?.filename} />
+        {/* <video className={cx(styles.hero_video, 'fixed top_0')} autoPlay loop muted src={blok?.heroVideo?.filename} /> */}
       </div>
-      <div className={cx('card bg_primary_shade', styles.hero_content)}>
+      <div className={cx('', styles.hero_content)}>
         {/* <div className={styles.hero_box}> */}
-          <div ref={navitems} className={cx('flex space_between mh_100 container', styles.hero_banner_container)}>
-            <div className={cx(styles.hero_nav)}>
-              <NavBar blok={blok} />
-            </div>
-            <div className={cx(styles.hero_content, 'flex gap_8')}>
-              <Intro blok={blok} />
-            </div>
+        <div ref={navitems} className={cx('flex space_between mh_100 container', styles.hero_banner_container)}>
+          <div className={cx(styles.hero_nav)}>
+            <NavBar blok={blok} />
           </div>
-          <div ref={scroll} className='flex row_center col_center'>
-            <ScrollDownComponent />
+          <div className={cx(styles.hero_content, 'flex gap_8')}>
+            <Intro blok={blok} />
+            <HeroProjectContainer blok={blok} />
           </div>
         </div>
+        <div ref={scroll} className='flex row_center col_center'>
+          <ScrollDownComponent />
+        </div>
+      </div>
       {/* </div> */}
     </div>
   )

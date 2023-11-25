@@ -1,0 +1,41 @@
+.cd {
+  padding: 0.5rem;
+}
+
+.cd:hover .project_card_1 {
+  /* animation-name: cards;
+  animation-duration: 3s;
+  animation-fill-mode: forwards; */
+  transform: rotate(0deg) !important;
+}
+
+.project_card {
+  transition: all ease 1s !important;
+  background: rgba(34, 34, 34, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  padding: 0.8rem;
+  display: flex;
+}
+
+.project_card_hover:hover {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  transform: rotate(0deg) translateX(-40px) !important;
+}
+
+/* @keyframes cards {
+  to {
+    transform: rotate(0deg);
+  }
+} */
+
+@media only screen and (max-width: 600px) {
+  .cd {
+    display: none !important;
+  }
+}

@@ -36,3 +36,12 @@
 .bg_white {
   background-color: $white;
 }
+
+.bg_text {
+  background-image: url(https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2575.jpg?w=996&t=st=1700826558~exp=1700827158~hmac=6c8ba63b16bdac7d644b5e97f9f387ec81b56f6c61aaa9e9620f4fcb933e00a9);
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+}

@@ -4,6 +4,7 @@ import './scss/sizes.scss'
 import './scss/fonts.scss'
 import './scss/color.scss'
 import './scss/positions.scss'
+import "./components/HeroProjectContainer/HeroProject.scss";
 import './scss/border.scss'
 import { Route, Routes } from 'react-router-dom';
 import { StoryblokComponent, useStoryblok } from '@storyblok/react';
