@@ -9,6 +9,7 @@ import './scss/border.scss'
 import { Route, Routes } from 'react-router-dom';
 import { StoryblokComponent, useStoryblok } from '@storyblok/react';
 import { useRef } from 'react'
+import ScreenLoader from './components/ScreenLoader/ScreenLoader'
 
 function App() {
   const slug = window.location.pathname;
@@ -30,7 +31,7 @@ function App() {
       <div ref={cursoor_blure} className='cursoor_blure' />
       <div>
         <Routes>
-          <Route path={slug} element={<StoryblokComponent blok={story?.content} />} />
+          <Route path={slug} element={story?.content ? <StoryblokComponent blok={story?.content} /> : <ScreenLoader />} />
         </Routes>
       </div>
     </div>
